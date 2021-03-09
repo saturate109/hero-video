@@ -1,0 +1,63 @@
+{
+  "page": {
+    "title": "Page title"
+  },
+  "hero": {
+    "title": "“Creativity Is Intelligence Having Fun.” – Albert Einstein",
+    "video": "/lavendar.mp4",
+    "mobile": "/hero-mobile.jpg"
+  },
+  "titles": [
+    "Electrify the modern generation",
+    "See life from a different perspective.",
+    "Find your freedom through life's luxuries.",
+    "Live your life with happiness."
+  ],
+  "body": "An electric car is a car which is propelled by one or more electric motors, using energy stored in rechargeable batteries. Compared to internal combustion engine vehicles, electric cars are quieter, have no exhaust emissions, and lower emissions overall. Charging an electric car can be done at a variety of charging stations; these charging stations can be installed in both houses and public areas.",
+  "images": [
+    { "src": "/images/jasper-geys-NyRe1Mj1pm4-unsplash.jpg", "alt": "car" },
+    { "src": "/images/pexels-abdulwahab-alawadhi-3422964.jpg", "alt": "car" }
+  ],
+  "pictures": [
+    {
+      "responsive": [
+        {
+          "media": "(max-width: 640px) and (orientation: landscape)",
+          "srcSet": "/images/nate-johnston-PcbJL9CYSXs-unsplash-mobile.jpg"
+        },
+        {
+          "media": "(max-width: 640px) and (orientation: portrait)",
+          "srcSet": "/images/nate-johnston-PcbJL9CYSXs-unsplash-mobile.jpg"
+        },
+        {
+          "media": "(max-width: 1024px) and (orientation: landscape)",
+          "srcSet": "/images/nate-johnston-PcbJL9CYSXs-unsplash.jpg"
+        },
+        {
+          "media": "(max-width: 1024px) and (orientation: portrait)",
+          "srcSet": "/images/nate-johnston-PcbJL9CYSXs-unsplash.jpg"
+        }
+      ],
+      "default": {
+        "image": "/images/nate-johnston-PcbJL9CYSXs-unsplash.jpg",
+        "alt": "promo"
+      }
+    },
+    {
+      "responsive": [
+        {
+          "media": "(max-width: 640px)",
+          "srcSet": "/images/pexels-billel-moula-542517-mobile.jpg"
+        },
+        {
+          "media": "(max-width: 1024px)",
+          "srcSet": "/images/pexels-billel-moula-542517.jpg"
+        }
+      ],
+      "default": {
+        "image": "/images/pexels-billel-moula-542517.jpg",
+        "alt": "promo"
+      }
+    }
+  ]
+}
