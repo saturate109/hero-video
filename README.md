@@ -1,21 +1,21 @@
 # Hero Video example
 
-Use of the Utility-first CSS framework, Tailwind CSS, and a CSS-in-JS library, styled-components to style react components.
+Use of the Utility-first CSS framework, [Tailwind CSS](https://tailwindcss.com/) and a CSS-in-JS library, [styled-components](https://styled-components.com/) to style react components.
 
 This demonstrates a powerful way to style our components.
 
-## Install, Build then Run
+## Install, Build then Serve
 
 Install the package dependancies:
 
 ```
-npm install
+1) npm install
 ```
 
 Build the app then serve it on http://localhost:5000
 
 ```
-npm run build && npx serve -s build
+2) npm run build && npx serve -s build
 ```
 
 Or start the app in development mode on http://localhost:3000
