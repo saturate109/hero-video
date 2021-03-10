@@ -19,14 +19,12 @@ export const Container = styled.div`
   width: 100%;
   color: #fff;
   pointer-events: none;
-  animation: repaint 5ms;
   @media screen and (min-width: 768px) {
     height: 6.25rem;
     padding: 0 40px;
   }
   &.scrolled {
     background-color: #000;
-    // animation: none;
   }
 `;
 
