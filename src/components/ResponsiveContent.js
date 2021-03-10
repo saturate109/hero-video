@@ -62,7 +62,7 @@ export const ResponsiveContent = ({ title, body, position, image }) => {
           position={position}
           className={`${showContent ? 'showContent' : 'hideContent'}`}
         >
-          <div className="lg:mx-0 opacity-1 mx-20 pl-0.5 pr-0.5 text-center">
+          <div className="mx-10 sm:mx-20 lg:mx-0 opacity-1 pl-0.5 pr-0.5 text-center">
             <h1 className="text-4xl font-bold mb-2">{title}</h1>
             <div className="text-base leading-8">{body}</div>
           </div>

@@ -10,7 +10,7 @@ const Content = styled.div`
 export const WideContent = ({ title, body }) => {
   return (
     <Content>
-      <div className="mx-20 px-0.5 text-center">
+      <div className="mx-10 sm:mx-20 px-0.5 text-center">
         <h1 className="text-4xl font-bold">{title}</h1>
         <div className="text-base leading-8">{body}</div>
       </div>
@@ -22,7 +22,7 @@ export const WideTitle = ({ title }) => {
   return (
     <Content>
       <div className="mx-20 px-0.5 text-center">
-        <h1 className="text-5xl font-bold">{title}</h1>
+        <h1 className="text-3xl sm:text-5xl font-bold">{title}</h1>
       </div>
     </Content>
   );
