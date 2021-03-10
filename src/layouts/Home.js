@@ -82,7 +82,7 @@ const Home = () => {
         <Overlay />
         <HeroText>
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center"
+            className="text-4xl md:text-5xl lg:text-6xl text-white font-bold text-center text-shadow-lg"
             style={{ zIndex: 1, opacity: `${titleOpacity}` }}
             ref={mainTitleRef}
           >
