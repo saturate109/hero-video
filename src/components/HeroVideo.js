@@ -32,35 +32,29 @@ const HeroVideo = ({
   containerHeight,
   loop,
   autoPlay,
+  loadingBar,
   children,
 }) => {
   const [progress, setProgress] = useState(0);
-
-  function updateProgress(video) {
-    var duration = video.duration;
-    if (duration > 0) {
-      for (var i = 0; i < video.buffered.length; i++) {
-        if (
-          video.buffered.start(video.buffered.length - 1 - i) <
-          video.currentTime
-        ) {
-          setProgress(
-            (video.buffered.end(video.buffered.length - 1 - i) / duration) * 100
-          );
-          break;
-        }
-      }
-    }
-  }
+  const [showLoader, setShowLoader] = useState(false);
 
   const videoRef = useCallback((node) => {
+    const loaderProgress = (video) => {
+      var duration = video.duration;
+      if (duration > 0 && video.buffered.length > 0) {
+        let bufferedTotal = 0;
+        for (var i = 0; i < video.buffered.length; i++) {
+          bufferedTotal += video.buffered.end(i) - video.buffered.start(i);
+        }
+        setProgress((bufferedTotal / duration) * 100);
+      }
+    };
+
     const handleEvent = (event) => {
-      switch (event.type) {
-        case 'progress':
-          event.target.buffered.length && updateProgress(event.target);
-          break;
-        default:
-          break;
+      const isPlaying = event.target.readyState === 4;
+      setShowLoader(!isPlaying);
+      if (!isPlaying) {
+        event.target.buffered.length && loaderProgress(event.target);
       }
     };
 
@@ -78,11 +72,14 @@ const HeroVideo = ({
         muted
         ref={videoRef}
       ></Video>
-      <LoadingBar
-        color="#f11946"
-        progress={progress}
-        onLoaderFinished={() => setProgress(0)}
-      />
+      {loadingBar.show && (
+        <LoadingBar
+          color={loadingBar.color}
+          progress={progress}
+          onLoaderFinished={() => setProgress(0)}
+          className={showLoader ? '' : 'hidden'}
+        />
+      )}
       {children}
     </Container>
   );
@@ -95,6 +92,10 @@ HeroVideo.propTypes = {
   autoPlay: PropTypes.bool,
   volume: PropTypes.number,
   loop: PropTypes.bool,
+  loadingBar: PropTypes.shape({
+    show: PropTypes.bool,
+    barColour: PropTypes.string,
+  }),
 };
 
 HeroVideo.defaultProps = {
@@ -103,6 +104,7 @@ HeroVideo.defaultProps = {
   autoPlay: true,
   volume: 0,
   loop: true,
+  loadingBar: { show: true, color: '#f11946' },
 };
 
-export default React.memo(HeroVideo);
+export default HeroVideo;
