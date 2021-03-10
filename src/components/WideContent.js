@@ -40,6 +40,7 @@ export const WideImage = ({ images, defaultImage }) => {
             src={defaultImage.image}
             alt={defaultImage.alt}
             className="w-full"
+            loading="lazy"
           />
         )}
       </picture>
