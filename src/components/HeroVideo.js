@@ -71,6 +71,7 @@ const HeroVideo = ({
         loop={loop}
         muted
         ref={videoRef}
+        playsinline
       ></Video>
       {loadingBar.show && (
         <LoadingBar
