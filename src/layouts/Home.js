@@ -48,7 +48,7 @@ const opacityFromScroll = (element) => {
     const distanceFromDocumentTop = element.offsetTop + element.offsetHeight;
     const distanceFromViewport = element.getBoundingClientRect().bottom;
     const opacity = (distanceFromViewport / distanceFromDocumentTop).toFixed(1);
-    return opacity > 0 && opacity <= 1 ? opacity : 0;
+    return opacity > 0 && opacity <= 1 ? opacity : 1;
   }
 
   return 1;
