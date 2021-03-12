@@ -1,7 +1,11 @@
 version: 2.1
 orbs:
-  node: circleci/node@3.0.0
+  cypress: cypress-io/cypress@1.27.0
 workflows:
-  node-tests:
+  build:
     jobs:
-      - node/test
+      - cypress/run:
+          executor: cypress/base-14
+          store_artifacts: true
+          start: npm start
+          wait-on: 'http://localhost:3000'
