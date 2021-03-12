@@ -18,8 +18,8 @@ describe('Hero Video', () => {
       .then((video) => {
         const videoElement = video.get(0);
         return new Cypress.Promise((resolve, reject) => {
-          // Resolve if data received is enough to play the video
-          if (videoElement.readyState === 4) {
+          // Resolve if data from video file has been received
+          if (videoElement.readyState > 0) {
             resolve(true);
           }
 
@@ -29,8 +29,11 @@ describe('Hero Video', () => {
           };
         });
       })
-      .then((res) => {
-        expect(res).to.be.true;
-      });
+      .then(
+        (res) => {
+          expect(res).to.be.true;
+        },
+        { timeout: 10000 }
+      );
   });
 });
