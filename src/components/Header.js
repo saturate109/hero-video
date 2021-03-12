@@ -54,15 +54,15 @@ export const Logo = styled.div`
 
 const Header = ({ scrolled }) => {
   return (
-    <Container className={scrolled ? 'scrolled' : ''}>
+    <Container className={scrolled ? 'scrolled' : ''} role="banner">
       <div className="ml-0 text-white flex flex-grow justify-between">
-        <Burger aria-label="Main menu">
+        <Burger aria-label="Main menu" role="navigation">
           <span></span>
           <span></span>
           <span></span>
         </Burger>
         <Logo>
-          <LeafSVG viewBox="0 0 500 500" />
+          <LeafSVG viewBox="0 0 500 500" role="img" aria-label="Logo" />
         </Logo>
       </div>
     </Container>
