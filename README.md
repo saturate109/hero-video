@@ -26,8 +26,8 @@ Or start the app in development mode on http://localhost:3000
 npm start
 ```
 
-To run the tests (coverage not yet complete):
+To run the cypress tests:
 
 ```
-npm test
+npm run cypress
 ```
