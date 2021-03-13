@@ -1,4 +1,4 @@
-# Hero Video example
+# Hero Video example [![CircleCI](https://circleci.com/gh/saturate109/hero-video/tree/master.svg?style=shield)](https://circleci.com/gh/saturate109/hero-video/tree/master)
 
 Use of the Utility-first CSS framework, [Tailwind CSS](https://tailwindcss.com/) and a CSS-in-JS library, [styled-components](https://styled-components.com/) to style react components.
 
