@@ -26,6 +26,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "prepare": "husky install",
     "build:style": "tailwind build ./src/styles/index.css -o ./src/styles/tailwind.css",
     "start": "craco start",
     "build": "craco build",
@@ -63,6 +64,7 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^3.1.0",
+    "husky": "^5.1.3",
     "intersection-observer": "^0.12.0",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
