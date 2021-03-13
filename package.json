@@ -10,9 +10,6 @@
   },
   "dependencies": {
     "@craco/craco": "^6.1.1",
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.5.0",
     "background-cover": "^0.1.0",
     "react": "^17.0.1",
     "react-background-video-player": "^1.1.7",
@@ -57,6 +54,9 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
     "autoprefixer": "^9.8.6",
     "cypress": "^6.6.0",
     "eslint": "^7.22.0",
