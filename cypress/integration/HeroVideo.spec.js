@@ -27,6 +27,10 @@ describe('Hero Video', () => {
           videoElement.oncanplay = () => {
             resolve(true);
           };
+
+          if (videoElement.readyState === 0) {
+            reject('No media info available');
+          }
         });
       })
       .then(
