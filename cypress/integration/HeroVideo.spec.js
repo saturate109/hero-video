@@ -28,9 +28,15 @@ describe('Hero Video', () => {
             resolve(true);
           };
 
-          if (videoElement.readyState === 0) {
-            reject('No media info available');
-          }
+          // On media error - reject promise with message
+          videoElement.onerror = () => {
+            reject(
+              'Error ' +
+                videoElement.error.code +
+                '; details: ' +
+                videoElement.error.message
+            );
+          };
         });
       })
       .then(
