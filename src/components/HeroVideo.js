@@ -95,8 +95,9 @@ HeroVideo.propTypes = {
   loop: PropTypes.bool,
   loadingBar: PropTypes.shape({
     show: PropTypes.bool,
-    barColour: PropTypes.string,
+    color: PropTypes.string,
   }),
+  children: PropTypes.node,
 };
 
 HeroVideo.defaultProps = {
@@ -106,6 +107,7 @@ HeroVideo.defaultProps = {
   volume: 0,
   loop: true,
   loadingBar: { show: true, color: '#f11946' },
+  children: null,
 };
 
 export default HeroVideo;

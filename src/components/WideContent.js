@@ -18,6 +18,11 @@ export const WideContent = ({ title, body }) => {
   );
 };
 
+WideContent.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+};
+
 export const WideTitle = ({ title }) => {
   return (
     <Content>
@@ -26,6 +31,10 @@ export const WideTitle = ({ title }) => {
       </div>
     </Content>
   );
+};
+
+WideTitle.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export const WideImage = ({ images, defaultImage }) => {

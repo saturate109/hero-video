@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Home from 'layouts/Home';
 import content from 'assets/json/content.json';

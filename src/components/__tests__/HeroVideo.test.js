@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import HeroVideo from 'components/HeroVideo';
 import content from 'assets/json/content.json';
