@@ -1,7 +1,7 @@
 import { CONTENT_JSON_FILE } from '/cypress/support/constants';
 
 describe('The Page', () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit('/');
   });
 
