@@ -4,7 +4,7 @@ Use of the Utility-first CSS framework, [Tailwind CSS](https://tailwindcss.com/)
 
 This demonstrates a powerful way to style our components.
 
-<hero-video.netlify.app>
+https://hero-video.netlify.app
 
 ## Install, Build then Serve
 
