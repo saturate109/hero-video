@@ -4,7 +4,7 @@ Use of the Utility-first CSS framework, [Tailwind CSS](https://tailwindcss.com/)
 
 This demonstrates a powerful way to style our components.
 
-<https://saturate109.github.io/hero-video/>
+<https://vigorous-hawking-9ba461.netlify.app>
 
 ## Install, Build then Serve
 
