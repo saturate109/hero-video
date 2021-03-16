@@ -1,4 +1,4 @@
-import React, { useState, createRef, useLayoutEffect } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import { styled } from 'twin.macro';
 
 import Page from 'components/Page';
@@ -57,7 +57,7 @@ const opacityFromScroll = (element) => {
 const Home = () => {
   const [scrolled, setScrolled] = useState(false);
   const [titleOpacity, setTitleOpacity] = useState(1);
-  const mainTitleRef = createRef();
+  const mainTitleRef = useRef();
 
   useLayoutEffect(() => {
     const handler = () => {
